@@ -491,7 +491,7 @@ footer a:hover {
     margin-top: 20px;
 }
 
-.prodetails .single-prod-img {
+.single-prod-img {
     min-width: 50%;
     padding-right: 40px;
 }
@@ -501,41 +501,67 @@ footer a:hover {
     padding-top: 15px;
 }
 
-.prodetails .single-prod-details h4 {
-    padding: 20px 0;
+.single-prod-details .quantity-box,
+.single-prod-details .size-box,
+.single-prod-details .price-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
 }
 
-.prodetails .single-prod-details h2 {
-    font-size: 30px;
+.single-prod-details .price-box h3{
+    height: 5vh;
+    color: #088178;
 }
 
-.prodetails .single-prod-details select {
-    display: block;
+.single-prod-details .quantity{
+    width: 22%;
+    border: 1px solid;
+}
+
+.single-prod-details .size{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 5vh;
+    border: 1px solid;
+}
+
+.single-prod-details .quantity i{
     padding: 5px 10px;
-    margin-bottom: 10px;
 }
 
-.prodetails .single-prod-details input {
-    display: block;
-    width: 50px;
-    height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+.single-prod-details .quantity i:last-child{
+    padding-right: 0;
 }
 
-.prodetails .single-prod-details input:focus,
-.prodetails .single-prod-details select:focus {
-    outline: none;
+.single-prod-details .quantity i:hover{
+    cursor: pointer;
+    color: #088178;
 }
 
-.prodetails .single-prod-details button {
+.single-prod-details .size option{
+    font-size: 20px;
+}
+.single-prod-details .quantity input{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    width: 25%;
+    height: 5vh;
+    margin: 0 12px;
+}
+
+.single-prod-details button {
     background-color: #088178;
     color: white;
+    margin: 15px 0;
 }
 
-.prodetails .single-prod-details span {
+.single-prod-details span {
     line-height: 25px;
 }
 
