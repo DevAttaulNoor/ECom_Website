@@ -516,7 +516,7 @@ footer a:hover {
 }
 
 .single-prod-details .quantity{
-    width: 22%;
+    width: 140px;
     border: 1px solid;
 }
 
@@ -533,10 +533,6 @@ footer a:hover {
     padding: 5px 10px;
 }
 
-.single-prod-details .quantity i:last-child{
-    padding-right: 0;
-}
-
 .single-prod-details .quantity i:hover{
     cursor: pointer;
     color: #088178;
@@ -546,13 +542,13 @@ footer a:hover {
     font-size: 20px;
 }
 .single-prod-details .quantity input{
-    text-align: center;
     font-size: 18px;
     font-weight: 600;
     border: none;
     width: 25%;
     height: 5vh;
     margin: 0 12px;
+    text-align: center;
 }
 
 .single-prod-details button {
@@ -968,28 +964,14 @@ footer a:hover {
     }
 
     /* ...................Single Product Page................... */
-    .prodetails .single-prod-details {
-        padding-top: 10px;
+    .prodetails {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
     }
 
-    .prodetails .single-prod-details span {
-        line-height: 10px;
-    }
-
-    .prodetails .single-prod-details h4 {
-        padding: 10px 0;
-    }
-
-    .prodetails .single-prod-details input {
-        width: 80px;
-        height: 30px;
-        margin: 10px 0;
-    }
-
-    .prodetails .single-prod-details select {
-        display: block;
-        padding: 5px 10px;
-        margin: 10px 0;
+    .single-prod-img {
+        padding-right: 0;
     }
 
     /* ...................Blog Page................... */
@@ -1042,32 +1024,36 @@ footer a:hover {
 
     /* ...................Globals................... */
     h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 22px;
     }
 
     h4 {
-        font-size: 14px;
+        font-size: 18px;
         line-height: 20px;
     }
 
     h5 {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     h6 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .default-btn {
@@ -1211,32 +1197,23 @@ footer a:hover {
         margin-top: 20px;
     }
 
-    .prodetails .single-prod-img {
+    .single-prod-img {
         padding: 0 0 25px 0;
     }
 
-    .prodetails .single-prod-details {
-        padding: 0;
-    }
-
-    .prodetails .single-prod-details h4 {
-        font-size: 26px;
-    }
-
-    .prodetails .single-prod-details select {
-        margin: 10px 0 20px;
+    .single-prod-details .quantity {
+        width: 120px;
     }
 
     .prodetails .single-prod-details input {
-        display: inline;
-        width: 83px;
-        height: 32px;
-        margin: 20px 0 0;
+        width: 40px;
+        height: 4vh;
+        margin: 0;
     }
 
-    .prodetails .default-btn {
-        display: block;
-        margin-bottom: 5px;
+    .single-prod-details .size {
+        width: 75%;
+        height: 4vh;
     }
 
     /* ...................Blog Page................... */
