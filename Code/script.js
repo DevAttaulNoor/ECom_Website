@@ -35,79 +35,44 @@ smallImg[3].onclick = function () {
 
 
 // Quantity Increase of the Product
-// let prodquant = document.getElementById("quantity-value").value;
-// let plus = document.querySelector(".fa-plus");
-// let minus = document.querySelector(".fa-minus");
-
-// function check_quant() {
-//     if (prodquant <= 1) {
-//         minus.removeEventListener('click', minus_quant);
-//     }
-
-//     else {
-//         minus.addEventListener('click', minus_quant)
-//     }
-// }
-
-// function plus_quant() {
-//     prodquant = parseInt(prodquant) + 1;
-//     check_quant();
-//     console.log(prodquant);
-// }
-
-// function minus_quant() {
-//     prodquant = parseInt(prodquant) - 1;
-//     check_quant();
-//     console.log(prodquant);
-// }
-
-// if (plus) {
-//     plus.addEventListener('click', plus_quant);
-// }
-
-// if (minus) {
-//     check_quant();
-// }
-
-let prodquant = parseInt(document.getElementById("quantity-value").innerHTML);
+let prodquant = document.getElementById("quantity-value").innerText;
+let change = document.getElementById('quantity-value')
 let plus = document.querySelector(".fa-plus");
 let minus = document.querySelector(".fa-minus");
 
 function check_quant() {
     if (prodquant <= 1) {
         minus.removeEventListener('click', minus_quant);
-    } else {
-        minus.addEventListener('click', minus_quant);
     }
-}
 
-function updateQuantityDisplay() {
-    document.getElementById("quantity-value").innerHTML = prodquant;
+    else {
+        minus.addEventListener('click', minus_quant)
+    }
 }
 
 function plus_quant() {
     prodquant = parseInt(prodquant) + 1;
     check_quant();
-    updateQuantityDisplay();
+    change.textContent = prodquant
     console.log(prodquant);
 }
 
 function minus_quant() {
     prodquant = parseInt(prodquant) - 1;
     check_quant();
-    updateQuantityDisplay();
+    change.textContent = prodquant
     console.log(prodquant);
 }
 
 if (plus) {
     plus.addEventListener('click', plus_quant);
+    prodquant.innerText = prodquant
 }
 
 if (minus) {
     check_quant();
+    prodquant.innerText = prodquant
 }
-
-updateQuantityDisplay();
 
 
 // Quantity Increase of the Product
@@ -140,4 +105,43 @@ if (options) {
       }
     });
   });
+}
+
+// Adding to cart
+// let cart = document.querySelectorAll(".prod .cart i")
+// let prodImg = document.querySelectorAll(".prod img")
+// let prodNam = document.querySelectorAll(".prod .description h5").value
+// let prodPrice = document.querySelectorAll(".prod .description h4").value
+// let cartProdImg = document.getElementById('cart-prod-img')
+// let cartProdNam = document.getElementById('cart-prod-name').value
+// let cartProdPrice = document.getElementById('cart-prod-price').value
+
+// if(cart){
+//     cart.addEventListener('click', ()=>{
+//         cartProdImg.src = prodImg.src;
+//         cartProdNam = prodNam;
+//         cartProdPrice = prodPrice;
+//         console.log(cartProdImg)
+//         console.log(cartProdNam)
+//         console.log(cartProdPrice)
+//     })
+// }
+
+let cart = document.querySelector(".prod .cart i");
+let prodImg = document.querySelectorAll(".prod img");
+let prodNam = document.querySelectorAll(".prod .description h5").textContent;
+let prodPrice = document.querySelectorAll(".prod .description h4").textContent;
+let cartProdImg = document.getElementById('cart-prod-img');
+let cartProdNam = document.getElementById('cart-prod-name');
+let cartProdPrice = document.getElementById('cart-prod-price');
+
+if (cart) {
+    cart.addEventListener('click', () => {
+        cartProdImg.src = prodImg.src;
+        cartProdNam.textContent = prodNam;
+        cartProdPrice.textContent = prodPrice;
+        console.log(cartProdImg);
+        console.log(cartProdNam);
+        console.log(cartProdPrice);
+    });
 }
