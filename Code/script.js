@@ -145,7 +145,6 @@ if (options) {
 //         console.log(cartProdPrice);
 //     });
 // }
-
 let cart = document.getElementById('cart-btn');
 let prodNam = document.querySelector('prod description h5').innerText
 let cartProdNam = document.getElementById('cart-prod-name').innerText;
@@ -154,11 +153,9 @@ let cartProdNamPlace = document.getElementById('cart-prod-name');
 if (cart) {
     cart.addEventListener('click', () => {
         console.log("Clicked")
-
         cartProdNam == prodNam
         cartProdNamPlace.textContent = cartProdNam
         console.log(cartProdNam)
-
         // cartProdImg.src = prodImg.src;
         // cartProdNam.textContent = prodNam;
         // cartProdPrice.textContent = prodPrice;
