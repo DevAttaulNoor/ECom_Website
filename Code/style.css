@@ -279,7 +279,7 @@ a {
     height: 40px;
     line-height: 40px;
     border-radius: 50px;
-    /* position: absolute; */
+    position: absolute;
     bottom: 45px;
     right: 10px;
     font-weight: 500;
