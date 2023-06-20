@@ -79,32 +79,32 @@ if (minus) {
 let options = document.querySelectorAll(".size option");
 
 if (options) {
-  options.forEach((option) => {
-    option.addEventListener('click', (event) => {
-      // Deselect all other options
-      options.forEach((otherOption) => {
-        if (otherOption !== event.target) {
-          otherOption.style.color = '';
-          otherOption.style.fontWeight = '500';
-          otherOption.classList.remove('selected');
-        }
-      });
+    options.forEach((option) => {
+        option.addEventListener('click', (event) => {
+            // Deselect all other options
+            options.forEach((otherOption) => {
+                if (otherOption !== event.target) {
+                    otherOption.style.color = '';
+                    otherOption.style.fontWeight = '500';
+                    otherOption.classList.remove('selected');
+                }
+            });
 
-      if (event.target.classList.contains('selected')) {
-        // Option has already been selected, revert changes
-        event.target.style.color = '';
-        event.target.style.fontWeight = '500';
-        event.target.classList.remove('selected');
-        console.log("Unclicked option");
-      } else {
-        // Option has not been selected, apply changes
-        event.target.style.color = '#088178';
-        event.target.style.fontWeight = '700';
-        event.target.classList.add('selected');
-        console.log("Clicked on option");
-      }
+            if (event.target.classList.contains('selected')) {
+                // Option has already been selected, revert changes
+                event.target.style.color = '';
+                event.target.style.fontWeight = '500';
+                event.target.classList.remove('selected');
+                console.log("Unclicked option");
+            } else {
+                // Option has not been selected, apply changes
+                event.target.style.color = '#088178';
+                event.target.style.fontWeight = '700';
+                event.target.classList.add('selected');
+                console.log("Clicked on option");
+            }
+        });
     });
-  });
 }
 
 // Adding to cart
@@ -127,21 +127,43 @@ if (options) {
 //     })
 // }
 
-let cart = document.querySelector(".prod .cart i");
-let prodImg = document.querySelectorAll(".prod img");
-let prodNam = document.querySelectorAll(".prod .description h5").textContent;
-let prodPrice = document.querySelectorAll(".prod .description h4").textContent;
-let cartProdImg = document.getElementById('cart-prod-img');
-let cartProdNam = document.getElementById('cart-prod-name');
-let cartProdPrice = document.getElementById('cart-prod-price');
+// let cart = document.querySelector(".prod .cart i");
+// let prodImg = document.querySelectorAll(".prod img");
+// let prodNam = document.querySelectorAll(".prod .description h5").textContent;
+// let prodPrice = document.querySelectorAll(".prod .description h4").textContent;
+// let cartProdImg = document.getElementById('cart-prod-img');
+// let cartProdNam = document.getElementById('cart-prod-name');
+// let cartProdPrice = document.getElementById('cart-prod-price');
+
+// if (cart) {
+//     cart.addEventListener('click', () => {
+//         cartProdImg.src = prodImg.src;
+//         cartProdNam.textContent = prodNam;
+//         cartProdPrice.textContent = prodPrice;
+//         console.log(cartProdImg);
+//         console.log(cartProdNam);
+//         console.log(cartProdPrice);
+//     });
+// }
+
+let cart = document.getElementById('cart-btn');
+let prodNam = document.querySelector('prod description h5').innerText
+let cartProdNam = document.getElementById('cart-prod-name').innerText;
+let cartProdNamPlace = document.getElementById('cart-prod-name');
 
 if (cart) {
     cart.addEventListener('click', () => {
-        cartProdImg.src = prodImg.src;
-        cartProdNam.textContent = prodNam;
-        cartProdPrice.textContent = prodPrice;
-        console.log(cartProdImg);
-        console.log(cartProdNam);
-        console.log(cartProdPrice);
+        console.log("Clicked")
+
+        cartProdNam == prodNam
+        cartProdNamPlace.textContent = cartProdNam
+        console.log(cartProdNam)
+
+        // cartProdImg.src = prodImg.src;
+        // cartProdNam.textContent = prodNam;
+        // cartProdPrice.textContent = prodPrice;
+        // console.log(cartProdImg);
+        // console.log(cartProdNam);
+        // console.log(cartProdPrice);
     });
 }
