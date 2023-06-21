@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce - Cart</title>
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="../style.css" />
+
 </head>
 
 <body>
     <!-- Navbar -->
     <section class="header center-flex">
-        <a href="#"><img src="../../Images/logo.png"></a>
+        <a href="#"><img src="../../Images/logo.png" /></a>
         <div>
             <ul class="navbar center-flex">
                 <a href="#" class="indent"><i class="far fa-indent"></i></a>
@@ -23,10 +23,16 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a class="lg-cart cart active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <li>
+                    <a class="lg-cart cart active" href="cart.html"
+                        ><i class="far fa-shopping-bag"></i
+                    ></a>
+                </li>
             </ul>
             <div class="slide-tab">
-                <a class="cart" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+                <a class="cart" href="cart.html"
+                    ><i class="far fa-shopping-bag"></i
+                ></a>
                 <i class="fas fa-outdent bar"></i>
             </div>
         </div>
@@ -52,44 +58,49 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr>
-                    <td><i class="far fa-times-circle fa-lg"></i></td>
-                    <td><img src="../../Images/products/f1.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
+                <tr>
+                <td><i class="far fa-times-circle fa-lg"></i></td>
+                <td><img src="../../Images/products/f1.jpg" alt=""></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+            <tr>
+                <td><i class="far fa-times-circle fa-lg"></i></td>
+                <td><img src="../../Images/products/f2.jpg" alt=""></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$120.19</td>
+            </tr>
+            <tr>
+                <td><i class="far fa-times-circle fa-lg"></i></td>
+                <td><img src="../../Images/products/f3.jpg" alt=""></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$130.19</td>
+            </tr>
+            <tr>
+                <td><i class="far fa-times-circle fa-lg"></i></td>
+                <td><img src="../../Images/products/f4.jpg" alt=""></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$129.19</td>
+            </tr>
                 <tr>
                     <td><i class="far fa-times-circle fa-lg"></i></td>
-                    <td><img src="../../Images/products/f2.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$120.19</td>
-                </tr>
-                <tr>
-                    <td><i class="far fa-times-circle fa-lg"></i></td>
-                    <td><img src="../../Images/products/f3.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$130.19</td>
-                </tr>
-                <tr>
-                    <td><i class="far fa-times-circle fa-lg"></i></td>
-                    <td><img src="../../Images/products/f4.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$129.19</td>
-                </tr> -->
-                <tr>
-                    <td><i class="far fa-times-circle fa-lg"></i></td>
-                    <td><img src="../../Images/products/f4.jpg" id="cart-prod-img"></td>
-                    <td id="cart-prod-name"></td>
-                    <td id="cart-prod-price"></td>
-                    <td><input type="number" value="1"></td>
+                    <td>
+                        <img
+                            src="../../Images/products/f4.jpg"
+                            id="cart-prod-img"
+                        />
+                    </td>
+                    <td id="cart-prod-name">xxx</td>
+                    <td id="cart-prod-price">xxx</td>
+                    <td><input type="number" value="1" /></td>
                     <td id="cart-prod-price"></td>
                 </tr>
             </tbody>
@@ -100,7 +111,7 @@
     <section class="cart-total section-p1">
         <div class="subtotal">
             <h3>Apply Coupon</h3>
-            <input type="text" placeholder="Enter Coupon">
+            <input type="text" placeholder="Enter Coupon" />
             <button class="default-btn coupon-btn">Apply</button>
             <h3>Cart Total</h3>
             <table>
@@ -167,5 +178,4 @@
 
     <script src="../script.js"></script>
 </body>
-
 </html>
