@@ -183,6 +183,14 @@ function updateCartDisplay() {
 addTocart.forEach(function (element) {
     element.addEventListener('click', () => {
         let index = Array.from(addTocart).indexOf(element);
+
+        // Check if the item is already in the cart
+        const isAlreadyInCart = cartitems.some(item => item.name === prodname[index].innerHTML);
+        if (isAlreadyInCart) {
+            // Item is already in the cart, do not add again
+            return;
+        }
+
         cartprodname.innerHTML = prodname[index].innerHTML;
         cartprodprice.innerHTML = prodprice[index].innerHTML;
         cartprodimg.src = prodimg[index].src;
@@ -196,7 +204,11 @@ addTocart.forEach(function (element) {
 
         cartitems.push(selectedItem);
         updateCartDisplay();
+
+        // Disable the "Add to Cart" button for the selected item
+        element.disabled = true;
     });
 });
+
 
 
