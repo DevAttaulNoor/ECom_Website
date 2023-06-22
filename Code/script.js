@@ -1,19 +1,67 @@
 // Mobile Side Navbar Process
-const slide = document.querySelector(".slide-tab");
-const unslide = document.querySelector(".indent");
+const nav_slide = document.querySelector(".nav-slide");
+const nav_unslide = document.querySelector(".indent");
 const nav = document.querySelector(".navbar");
 
-if (slide) {
-    slide.addEventListener('click', () => {
+if (nav_slide) {
+    nav_slide.addEventListener('click', () => {
         nav.classList.add("active");
     })
 }
 
-if (unslide) {
-    unslide.addEventListener('click', () => {
+if (nav_unslide) {
+    nav_unslide.addEventListener('click', () => {
         nav.classList.remove("active");
     })
 }
+
+
+// Mobile Side Navbar Process
+const cart_slide = document.querySelector("#cart-slide-open");
+const cart_unslide = document.querySelector("#cart-slide-close");
+const cart = document.querySelector(".cart-slide");
+
+if (cart_slide) {
+    cart_slide.addEventListener('click', () => {
+        console.log("Cart slide")
+        cart.classList.add("cart-active");
+    })
+}
+
+if (cart_unslide) {
+    cart_unslide.addEventListener('click', () => {
+        console.log("Cart unslide")
+        cart.classList.remove("cart-active");
+    })
+}
+
+let addTocart = document.querySelectorAll('.prod .cart');
+let prodname = document.querySelectorAll('.description h5');
+let prodprice = document.querySelectorAll('.description h4');
+let prodimg = document.querySelectorAll('.prod img');
+let cartprodname = document.querySelector('#cart-prod-name');
+let cartprodprice = document.querySelector('#cart-prod-price');
+let cartprodimg = document.querySelector('.items img');
+
+prodname.forEach(function(element) {
+  console.log(element.innerHTML);
+});
+
+prodprice.forEach(function(element) {
+  console.log(element.innerHTML);
+});
+
+console.log(cartprodname.innerHTML);
+console.log(cartprodprice.innerHTML);
+
+addTocart.forEach(function(element) {
+  element.addEventListener('click', () => {
+    let index = Array.from(addTocart).indexOf(element);
+    cartprodname.innerHTML = prodname[index].innerHTML;
+    cartprodprice.innerHTML = prodprice[index].innerHTML;
+    cartprodimg.src = prodimg[index].src;
+  });
+});
 
 
 // Single Product Slider
@@ -102,4 +150,6 @@ if (options) {
         });
     });
 }
+
+
 

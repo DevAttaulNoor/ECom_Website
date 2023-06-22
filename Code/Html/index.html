@@ -22,16 +22,29 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li>
-                    <a class="lg-cart cart" href="cart.html"
-                        ><i class="far fa-shopping-bag"></i
-                    ></a>
-                </li>
+                <li><a id="cart-slide-open" href="#"><i class="far fa-shopping-bag"></i></a></li>
+                <div class="cart-slide">
+                    <i id="cart-slide-close" class="fas fa-indent bar"></i>
+    
+                    <div class="cart-items">
+                        <h3>Cart Items</h3>
+                        <div class="items">
+                            <img src="../../Images/products/f1.jpg" width="90px" height="90px" alt="photo">
+                            <div class="item-details">
+                                <h5 id="cart-prod-name">xxxxx</h5>
+                                <h5 id="cart-prod-price">price</h5>
+                                <h5 id="cart-prod-quantity">quantity</h5>
+                            </div>
+                            <div class="item-process">
+                                <i class="far fa-times-circle fa-lg"></i>
+                                <h5 id="item-price">totprice</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </ul>
-            <div class="slide-tab">
-                <a class="cart" href="cart.html"
-                    ><i class="far fa-shopping-bag"></i
-                ></a>
+           
+            <div class="nav-slide">
                 <i class="fas fa-outdent bar"></i>
             </div>
         </div>
@@ -99,7 +112,7 @@
                 <img src="../../Images/products/f2.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Cartoon Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -123,7 +136,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$42</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -139,7 +152,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$62</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -155,7 +168,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$512</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -171,7 +184,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$79</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -187,7 +200,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$82</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -203,7 +216,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$17</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -226,7 +239,7 @@
                 <img src="../../Images/products/n1.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon Astronaut T-Shirts</h5>
+                    <h5>Blue Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -234,7 +247,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$23</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -242,7 +255,7 @@
                 <img src="../../Images/products/n2.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Grey Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -250,7 +263,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$20</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -258,7 +271,7 @@
                 <img src="../../Images/products/n3.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>White Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -266,7 +279,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$15</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -274,7 +287,7 @@
                 <img src="../../Images/products/n4.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Camoflag Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -282,7 +295,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$32</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -290,7 +303,7 @@
                 <img src="../../Images/products/n5.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Blue Jeans Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -298,7 +311,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$30</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -306,7 +319,7 @@
                 <img src="../../Images/products/n6.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Grey Shorts</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -314,7 +327,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$5</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -322,7 +335,7 @@
                 <img src="../../Images/products/n7.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Camel Colored Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -330,7 +343,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$8</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -338,7 +351,7 @@
                 <img src="../../Images/products/n8.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
-                    <h5>Cartoon T-Shirts</h5>
+                    <h5>Black Shirt</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -346,7 +359,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$72</h4>
+                    <h4>$18</h4>
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
@@ -444,7 +457,7 @@
         <p>@ 2023, EShop - HTML CSS Ecommerce</p>
     </section>
 
-    <script>
+    <!-- <script>
         let product = document.querySelectorAll(".prod");
 
         product.forEach(function (prod) {
@@ -452,7 +465,7 @@
                 window.location.href = "sproduct.html";
             };
         });
-    </script>
+    </script> -->
 
     <script src="../script.js"></script>
 </body>

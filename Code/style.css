@@ -129,9 +129,71 @@ a {
     position: relative;
 }
 
-.header .slide-tab,
+.header .nav-slide,
 .navbar .indent {
     display: none;
+}
+
+.header .cart-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    height: 100vh;
+    width: 400px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+    padding: 26px 0 0 20px;
+    transition: 0.3s;
+}
+
+.cart-active{
+    right: 0 !important;
+    cursor: pointer;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.cart-items .items{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.item-details{
+    padding: 0 20px;
+    border: 1px solid;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: solid;
+    border-width: 1px; 
+    border-color: #222;
+    line-height: 30px;
+    width: 200px;
+}
+
+.item-process{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.item-process i:hover{
+    color: red;
+    cursor: pointer;
 }
 
 /* Model Section */
@@ -930,6 +992,10 @@ footer a:hover {
         left: 20px;
     }
 
+    .header .cart-slide{
+        padding: 38px 0 0 20px;
+    }
+
     /* Hero Section */
     .hero {
         background-position: top 0 right 30%;
@@ -1117,10 +1183,6 @@ footer a:hover {
         color: #222;
     }
 
-    .navbar .lg-cart {
-        display: none;
-    }
-
     .navbar a {
         font-size: 16px;
     }
@@ -1129,15 +1191,22 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
-    .header .slide-tab {
+    .header .nav-slide {
         display: flex;
     }
 
-    .header .slide-tab i {
+    .header .nav-slide i {
         color: #1a1a1a;
         font-size: 24px;
         padding-left: 20px;
         height: 24px;
+    }
+
+    .header .cart-slide{
+        top: 290px;
+        right: -200px;
+        width: 200px;
+        padding: 20px 0 0 30px;
     }
 
     /* Hero Section */
