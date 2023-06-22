@@ -148,7 +148,7 @@ function updateCartDisplay() {
 
         cartItemElement2.innerHTML = `<img src="${item.image}" alt="${item.name}" width="90px" height="90px">`;
         cartItemElement3.innerHTML = `<h5 id="cart-prod-name">${item.name}</h5><h5 id="cart-prod-price">${item.price}</h5><div class="quantity"><i class="fas fa-plus"></i><span class="quantity-value">${item.quantity}</span><i class="fas fa-minus"></i></div>`;
-        cartItemElement4.innerHTML = `<i class="far fa-times-circle fa-lg"></i><h5 id="item-price">totprice</h5>`;
+        cartItemElement4.innerHTML = `<i class="far fa-times-circle fa-lg"></i><h5 class="item-price">${item.price * item.quantity}</h5>`;
         cartItemElement1.innerHTML = `<div class="item-img">${cartItemElement2.innerHTML}</div><div class="item-details">${cartItemElement3.innerHTML}</div><div class="item-process">${cartItemElement4.innerHTML}</div>`;
         cartprods.appendChild(cartItemElement1);
     });
@@ -164,6 +164,10 @@ function updateCartDisplay() {
             let updatedValue = currentValue + 1;
             quantityValue.innerText = updatedValue;
             cartitems[index].quantity = updatedValue; // Update the quantity in the cartitems array
+
+            // Update the item price based on the new quantity
+            const itemPriceElement = plusBtn.parentElement.parentElement.nextElementSibling.querySelector('.item-price');
+            itemPriceElement.innerText = cartitems[index].price * cartitems[index].quantity;
         });
     });
 
@@ -175,8 +179,18 @@ function updateCartDisplay() {
                 let updatedValue = currentValue - 1;
                 quantityValue.innerText = updatedValue;
                 cartitems[index].quantity = updatedValue; // Update the quantity in the cartitems array
+
+                // Update the item price based on the new quantity
+                const itemPriceElement = minusBtn.parentElement.parentElement.nextElementSibling.querySelector('.item-price');
+                itemPriceElement.innerText = cartitems[index].price * cartitems[index].quantity;
             }
         });
+    });
+
+    // Attach event listener to close button
+    const closeButton = cartItemElement4.querySelector('.fa-times-circle');
+    closeButton.addEventListener('click', () => {
+        removeFromCart(index);
     });
 }
 
@@ -197,10 +211,10 @@ addTocart.forEach(function (element) {
 
         let selectedItem = {
             name: prodname[index].innerHTML,
-            price: prodprice[index].innerHTML,
+            price: parseFloat(prodprice[index].innerText.replace(/[^\d.]/g, '')), // Extract numerical value from innerText
             image: prodimg[index].src,
             quantity: 1 // Set the initial quantity to 1
-        }
+        };
 
         cartitems.push(selectedItem);
         updateCartDisplay();
@@ -210,5 +224,7 @@ addTocart.forEach(function (element) {
     });
 });
 
-
-
+function removeFromCart(index) {
+    cartitems.splice(index, 1);
+    updateCartDisplay();
+}
