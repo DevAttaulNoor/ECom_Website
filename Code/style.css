@@ -158,9 +158,9 @@ a {
 .cart-items{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
     margin-top: 20px;
+    overflow-x: auto; 
+    overflow-y: auto;
 }
 
 .cart-items .items{
@@ -169,6 +169,16 @@ a {
     flex-direction: row;
 }
 
+.cart-items .items:last-child{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.item-img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .item-details{
     padding: 0 20px;
@@ -329,20 +339,6 @@ a {
     border-radius: 50px;
     position: absolute;
     bottom: 20px;
-    right: 10px;
-    font-weight: 500;
-    color: #088178;
-    background-color: #e8f6ea;
-}
-
-/* ! Needs to be worked on */
-.prod button #cart-btn {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    position: absolute;
-    bottom: 45px;
     right: 10px;
     font-weight: 500;
     color: #088178;
@@ -578,7 +574,7 @@ footer a:hover {
     padding-top: 15px;
 }
 
-.single-prod-details .quantity-box,
+.quantity-box,
 .single-prod-details .size-box,
 .single-prod-details .price-box {
     display: flex;
@@ -592,7 +588,7 @@ footer a:hover {
     color: #088178;
 }
 
-.single-prod-details .quantity {
+.quantity {
     width: 18%;
     height: 5vh;
     display: flex;
@@ -609,11 +605,11 @@ footer a:hover {
     border: 1px solid;
 }
 
-.single-prod-details .quantity i {
+.quantity i {
     padding: 5px 10px;
 }
 
-.single-prod-details .quantity i:hover {
+.quantity i:hover {
     cursor: pointer;
     color: #088178;
 }
@@ -621,7 +617,7 @@ footer a:hover {
 .single-prod-details .size option {
     font-size: 20px;
 }
-.single-prod-details .quantity span {
+.quantity span {
     font-size: 18px;
     font-weight: 600;
     padding: 0 15px;
