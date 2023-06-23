@@ -135,11 +135,14 @@ let cartprodprice = document.querySelector('#cart-prod-price');
 let cartprodimg = document.querySelector('.items img');
 let cartitems = [];
 let cartprods = document.querySelector('.cart-items');
+cartprods.classList.add('nonActive');
+
 
 function updateCartDisplay() {
     cartprods.innerHTML = '';
-
+    
     cartitems.forEach(item => {
+        cartprods.classList.remove('nonActive');
         let cartItemElement1 = document.createElement('div');
         cartItemElement1.classList.add('items');
         let cartItemElement2 = document.createElement('div');
