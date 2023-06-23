@@ -135,23 +135,42 @@ let cartprodprice = document.querySelector('#cart-prod-price');
 let cartprodimg = document.querySelector('.items img');
 let cartitems = [];
 let cartprods = document.querySelector('.cart-items');
+let buybtn = document.querySelector('#buy-btn')
 cartprods.classList.add('nonActive');
+buybtn.classList.add('nonActive');
+let itemremove = document.querySelectorAll('i#item-remove');
 
+function removeFromCart(index) {
+    cartitems.splice(index, 1);
+    updateCartDisplay();
+    attachRemoveListeners(); // Reattach event listeners after removing the item
+}
+
+function attachRemoveListeners() {
+    itemremove = document.getElementsByClassName('far fa-times-circle fa-lg');
+    for (let i = 0; i < itemremove.length; i++) {
+        itemremove[i].addEventListener('click', () => {
+            removeFromCart(i);
+        });
+    }
+}
 
 function updateCartDisplay() {
     cartprods.innerHTML = '';
-    
+
     cartitems.forEach(item => {
         cartprods.classList.remove('nonActive');
+        buybtn.classList.remove('nonActive');
+
         let cartItemElement1 = document.createElement('div');
         cartItemElement1.classList.add('items');
         let cartItemElement2 = document.createElement('div');
         let cartItemElement3 = document.createElement('div');
         let cartItemElement4 = document.createElement('div');
 
-        cartItemElement2.innerHTML = `<img src="${item.image}" alt="${item.name}" width="90px" height="90px">`;
+        cartItemElement2.innerHTML = `<img src="${item.image}" alt="${item.name}">`;
         cartItemElement3.innerHTML = `<h5 id="cart-prod-name">${item.name}</h5><h5 id="cart-prod-price">${item.price}</h5><div class="quantity"><i class="fas fa-plus"></i><span class="quantity-value">${item.quantity}</span><i class="fas fa-minus"></i></div>`;
-        cartItemElement4.innerHTML = `<i class="far fa-times-circle fa-lg"></i><h5 class="item-price">${item.price * item.quantity}</h5>`;
+        cartItemElement4.innerHTML = `<i id="item-remove" class="far fa-times-circle fa-lg"></i><h5 class="item-price">${item.price * item.quantity}</h5>`;
         cartItemElement1.innerHTML = `<div class="item-img">${cartItemElement2.innerHTML}</div><div class="item-details">${cartItemElement3.innerHTML}</div><div class="item-process">${cartItemElement4.innerHTML}</div>`;
         cartprods.appendChild(cartItemElement1);
     });
@@ -190,11 +209,7 @@ function updateCartDisplay() {
         });
     });
 
-    // Attach event listener to close button
-    const closeButton = cartItemElement4.querySelector('.fa-times-circle');
-    closeButton.addEventListener('click', () => {
-        removeFromCart(index);
-    });
+    attachRemoveListeners(); // Attach event listeners for item remove
 }
 
 addTocart.forEach(function (element) {
@@ -227,7 +242,5 @@ addTocart.forEach(function (element) {
     });
 });
 
-function removeFromCart(index) {
-    cartitems.splice(index, 1);
-    updateCartDisplay();
-}
+// Initial attachment of event listeners
+attachRemoveListeners();

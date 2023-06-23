@@ -103,9 +103,13 @@ a {
 }
 
 .navbar a {
-    padding-left: 40px;
+    margin-left: 40px;
     font-weight: 600;
     transform: 0.5s ease;
+}
+
+#cart-slide-open {
+    margin-left: 40px;
 }
 
 .navbar a:hover,
@@ -174,10 +178,12 @@ a {
     margin-bottom: 20px;
 }
 
-.item-img{
+.item-img img{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 90px; 
+    height: 90px;
 }
 
 .item-details{
@@ -199,6 +205,7 @@ a {
     justify-content: space-around;
     flex-direction: column;
     padding: 0 15px;
+    width: 85px;
 }
 
 .item-process i:hover{
@@ -206,8 +213,16 @@ a {
     cursor: pointer;
 }
 
+.item-details .quantity i {
+    padding: 0;
+}
+
 .nonActive{
     display: none;
+}
+
+.cart-slide button{
+    margin: 0 auto;
 }
 
 /* Model Section */
@@ -592,7 +607,7 @@ footer a:hover {
     color: #088178;
 }
 
-.quantity {
+.single-prod-details .quantity {
     width: 18%;
     height: 5vh;
     display: flex;
@@ -840,112 +855,6 @@ footer a:hover {
     border: 1px solid #e1e1e1;
 }
 
-/* ...................Cart Page................... */
-/* Cart Section */
-.cart table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-
-.cart table img {
-    width: 70px;
-}
-
-.cart table td:nth-child(1) {
-    width: 100px;
-    text-align: center;
-}
-
-.cart table td:nth-child(2) {
-    width: 150px;
-    text-align: center;
-}
-
-.cart table td:nth-child(3) {
-    width: 250px;
-    text-align: center;
-}
-
-.cart table td:nth-child(4),
-.cart table td:nth-child(5),
-.cart table td:nth-child(6) {
-    width: 150px;
-    text-align: center;
-}
-
-.cart table td:nth-child(5) input {
-    width: 80px;
-    padding: 10px 5px 10px 15px;
-    outline: none;
-    border: 1px solid;
-}
-
-.cart table thead {
-    border: 1px solid #e2e9e1;
-    border-left: none;
-    border-right: none;
-}
-
-.cart table thead td {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px 0;
-}
-
-.cart table tbody tr td {
-    padding-top: 15px;
-}
-
-.cart table tbody td {
-    font-size: 13px;
-}
-
-/* Cart Additional Cal Section */
-.cart-total {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.subtotal {
-    min-width: 100%;
-    border: 1px solid #e2e9e1;
-    padding: 30px;
-}
-
-.subtotal h3 {
-    color: #222;
-    padding-bottom: 15px;
-}
-
-.subtotal input {
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    outline: none;
-    border: 1px solid #e2e9e1;
-}
-
-.coupon-btn {
-    margin-bottom: 15px;
-}
-
-.subtotal table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.subtotal table td {
-    width: 50%;
-    border: 1px solid #e2e9e1;
-    padding: 10px;
-    font-size: 13px;
-}
-
 /* ...................Responsiveness of a website................... */
 @media screen and (max-width: 885px) {
     /* ...................Globals................... */
@@ -984,7 +893,11 @@ footer a:hover {
     }
 
     .navbar a {
-        padding-left: 20px;
+        margin-left: 20px;
+    }
+
+    #cart-slide-open {
+        margin-left: 20px;
     }
 
     .navbar a.active::after,
@@ -994,6 +907,22 @@ footer a:hover {
 
     .header .cart-slide{
         padding: 38px 0 0 20px;
+    }
+
+    .header .cart-slide{
+        right: -350px;
+        height: 100vh;
+        width: 350px;
+    }
+
+    .item-details{
+        padding: 0 10px;
+        width: 180px;
+    }
+    
+    .item-process{
+        padding: 0 8px;
+        width: 60px;
     }
 
     /* Hero Section */
@@ -1091,12 +1020,6 @@ footer a:hover {
     .form-details {
         margin: 40px;
         padding: 20px;
-    }
-
-    /* ...................Cart Page................... */
-    /* Cart Section */
-    .cart {
-        overflow-x: auto;
     }
 }
 
@@ -1207,6 +1130,39 @@ footer a:hover {
         right: -200px;
         width: 200px;
         padding: 20px 0 0 30px;
+    }
+
+    .cart-items .items{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-img img{
+        width: 140px; 
+        height: 140px;
+    }
+
+    .item-details{
+        padding: 6px 0;
+        border-top-style: none;
+        border-bottom-style: solid;
+        border-left-style: none;
+        border-right-style: none;
+        border-width: 1px; 
+        border-color: #222;
+        line-height: 25px;
+        width: auto;
+    }
+    
+    .item-process{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 5px 0;
+        width: 60px;
     }
 
     /* Hero Section */
@@ -1337,11 +1293,5 @@ footer a:hover {
 
     .people {
         padding-bottom: 40px;
-    }
-
-    /* ...................Cart Page................... */
-    /* Cart Section */
-    .cart {
-        overflow-x: auto;
     }
 }
