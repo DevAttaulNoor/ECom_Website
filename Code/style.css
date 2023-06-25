@@ -113,8 +113,10 @@ a {
 }
 
 .navbar a:hover,
+#cart-slide-open:hover,
 .navbar a.active {
     color: #088178;
+    cursor: pointer;
 }
 
 .navbar a.active::after,

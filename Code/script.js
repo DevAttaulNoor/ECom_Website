@@ -143,7 +143,6 @@ let itemremove = document.querySelectorAll('i#item-remove');
 function removeFromCart(index) {
     cartitems.splice(index, 1);
     updateCartDisplay();
-    attachRemoveListeners(); // Reattach event listeners after removing the item
 }
 
 function attachRemoveListeners() {
@@ -152,6 +151,10 @@ function attachRemoveListeners() {
         itemremove[i].addEventListener('click', () => {
             removeFromCart(i);
         });
+    }
+
+    if (cartitems.length == 0){
+        buybtn.classList.add('nonActive');
     }
 }
 
@@ -221,7 +224,7 @@ addTocart.forEach(function (element) {
         if (isAlreadyInCart) {
             // Item is already in the cart, do not add again
             return;
-        }
+        }     
 
         cartprodname.innerHTML = prodname[index].innerHTML;
         cartprodprice.innerHTML = prodprice[index].innerHTML;
@@ -242,5 +245,19 @@ addTocart.forEach(function (element) {
     });
 });
 
-// Initial attachment of event listeners
-attachRemoveListeners();
+let products = document.querySelectorAll(".prod");
+let cartBtns = document.querySelectorAll(".prod .cart");
+
+products.forEach(function (product) {
+    product.onclick = function (event) {
+        event.stopPropagation(); // Prevents the cart button event from triggering
+
+        window.location.href = "sproduct.html";
+    };
+
+    let cartButton = product.querySelector(".cart");
+    cartButton.onclick = function (event) {
+        event.stopPropagation(); // Prevents the product click event from triggering
+        return false; // Prevents the default behavior of the cart button
+    };
+});
