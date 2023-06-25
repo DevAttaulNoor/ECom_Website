@@ -39,21 +39,14 @@ if (cart_unslide) {
 
 
 // Single Product Slider
-// let mainImg = document.querySelector(".mainImg");
-// let smallImg = document.querySelectorAll(".smallImg");
+let mainImg = document.querySelector(".mainImg");
+let smallImg = document.querySelectorAll(".smallImg");
 
-// smallImg[0].onclick = function () {
-//     mainImg.src = smallImg[0].src;
-// }
-// smallImg[1].onclick = function () {
-//     mainImg.src = smallImg[1].src;
-// }
-// smallImg[2].onclick = function () {
-//     mainImg.src = smallImg[2].src;
-// }
-// smallImg[3].onclick = function () {
-//     mainImg.src = smallImg[3].src;
-// }
+smallImg.forEach(function (img, index) {
+    img.onclick = function () {
+        mainImg.src = smallImg[index].src;
+    };
+});
 
 
 // Quantity Increase of the Product

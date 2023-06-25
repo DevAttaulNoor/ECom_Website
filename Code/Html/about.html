@@ -14,8 +14,7 @@
 <body>
     <!-- Navbar -->
     <section class="header center-flex">
-        <a href="#"><img src="../../Images/logo.png"></a>
-
+        <a href="#"><img src="../../Images/logo.png" /></a>
         <div>
             <ul class="navbar center-flex">
                 <a href="#" class="indent"><i class="far fa-indent"></i></a>
@@ -24,11 +23,37 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a class="lg-cart cart" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <li>
+                    <i id="cart-slide-open" class="far fa-shopping-bag"></i>
+                </li>
+                <div class="cart-slide">
+                    <i id="cart-slide-close" class="fas fa-indent bar"></i>
+                    <div class="cart-items">
+                        <div class="items">
+                            <div class="item-img">
+                                <img src="#" alt="photo" />
+                            </div>
+                            <div class="item-details">
+                                <h5 id="cart-prod-name"></h5>
+                                <h5 id="cart-prod-price"></h5>
+                                <div class="quantity">
+                                    <i class="fas fa-plus"></i>
+                                    <span id="quantity-value"></span>
+                                    <i class="fas fa-minus"></i>
+                                </div>
+                            </div>
+                            <div class="item-process">
+                                <i id="item-remove" class="far fa-times-circle fa-lg"></i>
+                                <h5 id="item-price"></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="buy-btn" class="default-btn" onclick="alert('All the items will be Delivered!')">
+                        Buy Now
+                    </button>
+                </div>
             </ul>
-
-            <div class="slide-tab">
-                <a class="cart" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <div class="nav-slide">
                 <i class="fas fa-outdent bar"></i>
             </div>
         </div>
