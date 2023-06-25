@@ -24,10 +24,10 @@ The e-commerce website includes the following features.
 Technologies Used....
 The website is built using the following technologies.
 
-HTML: Markup language for creating the structure and content of web pages.
-CSS: Stylesheets for visually styling the web pages.
-JavaScript: Programming language for implementing interactive features and functionality.
-jQuery: JavaScript library for simplified DOM manipulation and event handling.
+- HTML: Markup language for creating the structure and content of web pages.
+- CSS: Stylesheets for visually styling the web pages.
+- JavaScript: Programming language for implementing interactive features and functionality.
+- jQuery: JavaScript library for simplified DOM manipulation and event handling.
 
 License....
 This project is licensed under the DevAttaulNoor.
