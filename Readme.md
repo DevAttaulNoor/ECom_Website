@@ -1,18 +1,16 @@
 # A Responsive ECommerce Website Using HTML, CSS and JavaScript
-
 This repository contains the code for an e-commerce website developed using HTML, CSS, and JavaScript. 
 The website allows users to browse and purchase products online.
 
-Getting Started....
-To run the website locally on your machine, follow these steps:
+# Getting Started
+To run the website locally on your machine, follow these steps.
 - Clone the repository or download the source code.
 - Open the project directory in your preferred code editor.
 - Ensure you have a modern web browser installed.
 - Open the index.html file in your browser.
 
-Features....
+# Features
 The e-commerce website includes the following features.
-
 - User authentication: Users can create accounts, log in, and log out.
 - Product listing: The website displays a list of products with their details, such as name, price, and image.
 - Product search: Users can search for products by keywords.
@@ -21,16 +19,15 @@ The e-commerce website includes the following features.
 - Checkout: Users can proceed to the checkout process and make payments.
 - Order history: Users can view their order history and track the status of their orders.
 
-Technologies Used....
+# Technologies
 The website is built using the following technologies.
-
 - HTML: Markup language for creating the structure and content of web pages.
 - CSS: Stylesheets for visually styling the web pages.
 - JavaScript: Programming language for implementing interactive features and functionality.
 - jQuery: JavaScript library for simplified DOM manipulation and event handling.
 
-License....
+# License
 This project is licensed under the DevAttaulNoor.
 
-Contact....
+# Contact
 If you have any questions or suggestions, feel free to contact the project maintainer at attaulnoor2001@gmail.com
