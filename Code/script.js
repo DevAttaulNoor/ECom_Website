@@ -1,4 +1,4 @@
-// Mobile Side Navbar Process
+//* Mobile Side Navbar Process
 const nav_slide = document.querySelector(".nav-slide");
 const nav_unslide = document.querySelector(".indent");
 const nav = document.querySelector(".navbar");
@@ -15,30 +15,24 @@ if (nav_unslide) {
     })
 }
 
-
-// Mobile Side Navbar Process
+//* Mobile Side Navbar Process
 const cart_slide = document.querySelector("#cart-slide-open");
 const cart_unslide = document.querySelector("#cart-slide-close");
 const cart = document.querySelector(".cart-slide");
 
 if (cart_slide) {
     cart_slide.addEventListener('click', () => {
-        console.log("Cart slide")
         cart.classList.add("cart-active");
     })
 }
 
 if (cart_unslide) {
     cart_unslide.addEventListener('click', () => {
-        console.log("Cart unslide")
         cart.classList.remove("cart-active");
     })
 }
 
-
-
-
-// Single Product Slider
+//* Single Product Slider
 let mainImg = document.querySelector(".mainImg");
 let smallImg = document.querySelectorAll(".smallImg");
 
@@ -48,8 +42,7 @@ smallImg.forEach(function (img, index) {
     };
 });
 
-
-// Quantity Increase of the Product
+//* Quantity Increase of the Product
 let prodquant = document.getElementById("quantity-value").innerText;
 let change = document.getElementById('quantity-value')
 let plus = document.querySelector(".fa-plus");
@@ -88,8 +81,7 @@ if (minus) {
     prodquant.innerText = prodquant
 }
 
-
-// Size Options of the Product
+//* Size Options of the Product
 let options = document.querySelectorAll(".size option");
 if (options) {
     options.forEach((option) => {
@@ -118,10 +110,10 @@ if (options) {
     });
 }
 
-// Adding items to cart
+//* Adding items to cart
 let addTocart = document.querySelectorAll('.prod .cart');
-let prodname = document.querySelectorAll('.description h5');
-let prodprice = document.querySelectorAll('.description h4');
+let prodname = document.querySelectorAll('.description .prod-name');
+let prodprice = document.querySelectorAll('.description .prod-price');
 let prodimg = document.querySelectorAll('.prod img');
 let cartprodname = document.querySelector('#cart-prod-name');
 let cartprodprice = document.querySelector('#cart-prod-price');
