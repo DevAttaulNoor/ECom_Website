@@ -230,7 +230,7 @@ a {
 /* Model Section */
 .hero {
     background-image: url(../Images/hero4.png);
-    background-position: top 25% right 0;
+    background-position: top 25% right 25%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -308,13 +308,14 @@ a {
 
 .prod-container {
     padding-top: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 
 .prod {
-    width: 22%;
-    min-width: 200px;
+    width: 85%;
     padding: 10px 12px;
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -349,17 +350,17 @@ a {
     color: rgb(243, 181, 25);
 }
 
-.prod .description h4 {
+.prod .description .prod-price {
     color: #088178;
 }
 
 .prod .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
     border-radius: 50px;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 10px;
     font-weight: 500;
     color: #088178;
@@ -455,16 +456,21 @@ a {
     background-position: 20% 30%;
     background-color: #041e42;
     justify-content: space-between;
-    flex-wrap: wrap;
     height: 25vh;
 }
 
 .newsletter h4 {
     color: white;
+    margin-bottom: 10px;
 }
 
 .newsletter span {
     color: #ffbd27;
+}
+
+.newsletter .newstext {
+    display: flex;
+    flex-direction: column;
 }
 
 .newsletter .form {
@@ -483,8 +489,9 @@ a {
     border-bottom-right-radius: 0;
 }
 
-.newsletter button {
+.newsletter #news-btn {
     width: 20%;
+    padding: 10px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -544,6 +551,7 @@ footer a:hover {
     background-image: url(../Images/banner/b1.jpg);
     background-position: top 0 right 28%;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 50vh;
     flex-direction: column;
@@ -610,10 +618,11 @@ footer a:hover {
 }
 
 .single-prod-details .quantity {
-    width: 18%;
-    height: 5vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 5vh;
     border: 1px solid;
 }
 
@@ -626,8 +635,12 @@ footer a:hover {
     border: 1px solid;
 }
 
-.quantity i {
-    padding: 5px 10px;
+.quantity i.fa-plus {
+    margin-left: 8px;
+}
+
+.quantity i.fa-minus {
+    margin-right: 8px;
 }
 
 .quantity i:hover {
@@ -635,14 +648,15 @@ footer a:hover {
     color: #088178;
 }
 
-.single-prod-details .size option {
-    font-size: 20px;
-}
 .quantity span {
     font-size: 18px;
     font-weight: 600;
-    padding: 0 15px;
+    padding: 0 5px;
     text-align: center;
+}
+
+.single-prod-details .size option {
+    font-size: 20px;
 }
 
 .single-prod-details button {
@@ -724,7 +738,6 @@ footer a:hover {
 /* About Head Section */
 .about-head img {
     width: 50%;
-    height: auto;
 }
 
 .about-head div {
@@ -761,6 +774,7 @@ footer a:hover {
 /* ...................Contact Page................... */
 /* Contact details Section */
 .contact-details {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -858,7 +872,7 @@ footer a:hover {
 }
 
 /* ...................Responsiveness of a website................... */
-@media screen and (max-width: 885px) {
+@media screen and (max-width: 950px) {
     /* ...................Globals................... */
     h1 {
         font-size: 36px;
@@ -945,6 +959,7 @@ footer a:hover {
     /* Product Section */
     .prod-container {
         padding-top: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     /* Banner Section */
@@ -964,8 +979,17 @@ footer a:hover {
     }
 
     /* Newsletter Section */
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter .newstext {
+        align-items: center;
+        text-align: center;
+    }
+    
     .newsletter .form {
-        width: 100%;
+        width: 80%;
     }
 
     /* ...................Shop Page................... */
@@ -1020,12 +1044,17 @@ footer a:hover {
     /* ...................Contact Page................... */
     /* Contact Form Section */
     .form-details {
+        flex-direction: column;
         margin: 40px;
         padding: 20px;
     }
+
+    .people {
+        padding-bottom: 40px;
+    }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 680px) {
     /* ...................Globals................... */
     h1 {
         font-size: 28px;
@@ -1045,7 +1074,7 @@ footer a:hover {
     }
 
     h5 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     h6 {
@@ -1185,10 +1214,12 @@ footer a:hover {
     }
 
     /* Product Section */
-    .prod {
-        min-width: 165px;
-        padding: 4px 6px;
-        margin: 10px 0;
+    .prod-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .prod .description i {
+        font-size: 10px;
     }
 
     /* Small Banners */
@@ -1209,6 +1240,15 @@ footer a:hover {
 
     .banner3 .banner-box3 {
         margin-bottom: 0;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        height: 20vh;
+    }
+
+    .newsletter #news-btn{
+        padding: 5px;
     }
 
     /* Footer Section */
@@ -1282,18 +1322,11 @@ footer a:hover {
     }
 
     .details {
-        /* width: 100%; */
         margin-bottom: 20px;
     }
 
     /* Contact Form Section */
     .form-details {
-        flex-direction: column;
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .people {
-        padding-bottom: 40px;
+        margin: 20px; 
     }
 }
