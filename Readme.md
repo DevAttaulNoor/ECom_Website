@@ -1,5 +1,5 @@
-# A Responsive ECommerce Website Using HTML, CSS and Javascript
-This repository contains the code for an e-commerce website developed using HTML, CSS, and JavaScript. 
+# Introduction
+This repository contains the code for a responsive Electronic Commerce website developed using HTML, CSS, and JavaScript. 
 The website allows users to browse and purchase products online.
 
 # Getting Started
