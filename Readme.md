@@ -1,6 +1,5 @@
 # Introduction
-This repository contains the code for a responsive Electronic Commerce website developed using HTML, CSS, and JavaScript. 
-The website allows users to browse and purchase products online.
+This Ecommerce website is designed to facilitate product viewing, multipage navigation, order placement, and cart functionality. It has been developed using HTML, CSS, and JavaScript, emphasizing responsiveness and simplicity.
 
 # Getting Started
 To run the website locally on your machine, follow these steps.
@@ -10,21 +9,23 @@ To run the website locally on your machine, follow these steps.
 - Open the index.html file in your browser.
 
 # Features
-The e-commerce website includes the following features.
-- User authentication: Users can create accounts, log in, and log out.
+This is a dumpy kinda website in which all the items are already placed 
 - Product listing: The website displays a list of products with their details, such as name, price, and image.
 - Product search: Users can search for products by keywords.
 - Product filtering: Users can filter products by category, price range, etc.
 - Shopping cart: Users can add products to their shopping cart and manage the cart items.
-- Checkout: Users can proceed to the checkout process and make payments.
-- Order history: Users can view their order history and track the status of their orders.
+
+# Functionalities:
+- Product Viewing: The users can visit the website and browse through the available items. Product information, images, and details are displayed for user perusal.
+- Order Placement: The users also have the ability to place orders for desired items. The chosen items are added to a cart section for review before finalizing the purchase.
+- Cart Functionality: The website includes a cart feature where selected items are stored. Users can review, modify, or remove items before confirming their order.
+- Multipage Navigation: The website consists of multiple pages allowing users to explore different sections such as shopstore, blogs, about us, contact, etc.
 
 # Technologies
 The website is built using the following technologies.
 - HTML: Markup language for creating the structure and content of web pages.
 - CSS: Stylesheets for visually styling the web pages.
 - JavaScript: Programming language for implementing interactive features and functionality.
-- jQuery: JavaScript library for simplified DOM manipulation and event handling.
 
 # License
 This project is licensed under the DevAttaulNoor.
