@@ -12,6 +12,7 @@ if (nav_slide) {
 if (nav_unslide) {
     nav_unslide.addEventListener('click', () => {
         nav.classList.remove("active");
+        cart.classList.remove("cart-active");
     })
 }
 
@@ -111,7 +112,7 @@ if (options) {
 }
 
 //* Adding items to cart
-let addTocart = document.querySelectorAll('.prod .cart');
+let addTocart = document.querySelectorAll('.prod .cartSection');
 let prodname = document.querySelectorAll('.description .prod-name');
 let prodprice = document.querySelectorAll('.description .prod-price');
 let prodimg = document.querySelectorAll('.prod img');
@@ -151,17 +152,31 @@ function updateCartDisplay() {
         cartprods.classList.remove('nonActive');
         buybtn.classList.remove('nonActive');
 
-        let cartItemElement1 = document.createElement('div');
-        cartItemElement1.classList.add('items');
-        let cartItemElement2 = document.createElement('div');
-        let cartItemElement3 = document.createElement('div');
-        let cartItemElement4 = document.createElement('div');
+        let cartItem = document.createElement('div');
+        cartItem.classList.add('items');
 
-        cartItemElement2.innerHTML = `<img src="${item.image}" alt="${item.name}">`;
-        cartItemElement3.innerHTML = `<h5 id="cart-prod-name">${item.name}</h5><h5 id="cart-prod-price">${item.price}</h5><div class="quantity"><i class="fas fa-plus"></i><span class="quantity-value">${item.quantity}</span><i class="fas fa-minus"></i></div>`;
-        cartItemElement4.innerHTML = `<i id="item-remove" class="far fa-times-circle fa-lg"></i><h5 class="item-price">${item.price * item.quantity}</h5>`;
-        cartItemElement1.innerHTML = `<div class="item-img">${cartItemElement2.innerHTML}</div><div class="item-details">${cartItemElement3.innerHTML}</div><div class="item-process">${cartItemElement4.innerHTML}</div>`;
-        cartprods.appendChild(cartItemElement1);
+        cartItem.innerHTML = `
+        <i id="item-remove" class="far fa-times-circle fa-lg"></i>
+
+        <div class="item-inner">
+        <img src="${item.image}" alt="${item.name}">
+
+        <div class="item-details">
+        <div class="item-info">
+        <h5 id="cart-prod-name">${item.name}</h5> 
+        <h5 id="cart-prod-price">${item.price}</h5>
+        </div>
+        
+        <div class="quantity">
+        <i class="fas fa-plus"></i> 
+        <span class="quantity-value">${item.quantity}</span> 
+        <i class="fas fa-minus"></i>
+        </div>
+        </div>
+        </div>
+
+        <h5 class="item-price">Total: ${item.price * item.quantity}</h5>`
+        cartprods.appendChild(cartItem);
     });
 
     // Attach event listeners to plus and minus buttons
@@ -177,10 +192,10 @@ function updateCartDisplay() {
             cartitems[index].quantity = updatedValue; // Update the quantity in the cartitems array
 
             // Update the item price based on the new quantity
-            const itemPriceElement = plusBtn.parentElement.parentElement.nextElementSibling.querySelector('.item-price');
+            const itemPriceElement = plusBtn.getElementsByClassName('.item-price');
             itemPriceElement.innerText = cartitems[index].price * cartitems[index].quantity;
-
             saveCartItems(); // Save the updated cart items to localStorage
+            updateCartDisplay();
         });
     });
 
@@ -194,10 +209,10 @@ function updateCartDisplay() {
                 cartitems[index].quantity = updatedValue; // Update the quantity in the cartitems array
 
                 // Update the item price based on the new quantity
-                const itemPriceElement = minusBtn.parentElement.parentElement.nextElementSibling.querySelector('.item-price');
+                const itemPriceElement = minusBtn.getElementsByClassName('.item-price');
                 itemPriceElement.innerText = cartitems[index].price * cartitems[index].quantity;
-
                 saveCartItems(); // Save the updated cart items to localStorage
+                updateCartDisplay();
             }
         });
     });
@@ -241,7 +256,7 @@ addTocart.forEach(function (element) {
 });
 
 let products = document.querySelectorAll(".prod");
-let cartBtns = document.querySelectorAll(".prod .cart");
+let cartBtns = document.querySelectorAll(".prod .cartSection");
 
 products.forEach(function (product) {
     product.onclick = function (event) {
@@ -250,7 +265,7 @@ products.forEach(function (product) {
         window.location.href = "sproduct.html";
     };
 
-    let cartButton = product.querySelector(".cart");
+    let cartButton = product.querySelector(".cartSection");
     cartButton.onclick = function (event) {
         event.stopPropagation(); // Prevents the product click event from triggering
         return false; // Prevents the default behavior of the cart button
