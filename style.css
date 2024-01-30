@@ -235,7 +235,7 @@ a {
 
 /* Model Section */
 .hero {
-    background-image: url(../Images/hero4.png);
+    background-image: url(./Images/hero4.png);
     background-position: top 25% right 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -249,7 +249,7 @@ a {
 }
 
 .hero button {
-    background-image: url(../Images/button.png);
+    background-image: url(./Images/button.png);
     background-color: transparent;
     background-repeat: no-repeat;
     color: #088178;
@@ -389,7 +389,7 @@ a {
 
 /* Banner */
 .banner {
-    background-image: url(../Images/banner/b2.jpg);
+    background-image: url(./Images/banner/b2.jpg);
     background-position: center;
     background-size: cover;
     height: 40vh;
@@ -414,7 +414,7 @@ a {
 }
 
 .sm-banner .banner-box {
-    background-image: url(../Images/banner/b17.jpg);
+    background-image: url(./Images/banner/b17.jpg);
     background-position: center;
     background-size: cover;
     width: 49%;
@@ -426,7 +426,7 @@ a {
 }
 
 .sm-banner .banner-box2 {
-    background-image: url(../Images/banner/b10.jpg);
+    background-image: url(./Images/banner/b10.jpg);
 }
 
 .sm-banner h2,
@@ -448,7 +448,7 @@ a {
 }
 
 .banner3 .banner-box {
-    background-image: url(../Images/banner/b7.jpg);
+    background-image: url(./Images/banner/b7.jpg);
     background-position: center;
     background-size: cover;
     width: 32%;
@@ -459,11 +459,11 @@ a {
 }
 
 .banner3 .banner-box2 {
-    background-image: url(../Images/banner/b4.jpg);
+    background-image: url(./Images/banner/b4.jpg);
 }
 
 .banner3 .banner-box3 {
-    background-image: url(../Images/banner/b18.jpg);
+    background-image: url(./Images/banner/b18.jpg);
 }
 
 .banner3 h4,
@@ -473,7 +473,7 @@ a {
 
 /* Newsletter Section */
 .newsletter {
-    background-image: url(../Images/banner/b14.png);
+    background-image: url(./Images/banner/b14.png);
     background-repeat: no-repeat;
     background-position: 20% 30%;
     background-color: #041e42;
@@ -570,7 +570,7 @@ footer a:hover {
 /* ...................Shop Page................... */
 /* Page Header Section */
 .page-header {
-    background-image: url(../Images/banner/b1.jpg);
+    background-image: url(./Images/banner/b1.jpg);
     background-position: top 0 right 28%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -694,7 +694,7 @@ footer a:hover {
 /* ...................Blog Page................... */
 /* Blog Page Header Section */
 .bloghead {
-    background-image: url(../Images/banner/b19.jpg);
+    background-image: url(./Images/banner/b19.jpg);
 }
 
 /* Blog Section */
@@ -753,7 +753,7 @@ footer a:hover {
 /* ...................About Page................... */
 /* About Page Header Section */
 .aboutheader {
-    background-image: url(../Images/about/banner.png);
+    background-image: url(./Images/about/banner.png);
     background-position: center;
 }
 
@@ -1202,7 +1202,7 @@ footer a:hover {
     }
 
     .hero button {
-        background-image: url(../Images/button-sm.png);
+        background-image: url(./Images/button-sm.png);
         padding: 5px 30px 8px 25px;
         font-size: 10px;
     }

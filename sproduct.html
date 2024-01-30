@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce - Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar -->
     <section class="header center-flex">
-        <a href="#"><img src="../../Images/logo.png" /></a>
+        <a href="#"><img src="./Images/logo.png" /></a>
         <div>
             <ul class="navbar center-flex">
                 <a href="#" class="indent"><i class="far fa-indent"></i></a>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -48,7 +48,9 @@
                             </div>
                         </div>
                     </div>
-                    <button id="buy-btn" class="default-btn" onclick="alert('All the items will be Delivered!')">Buy Now</button>
+                    <button id="buy-btn" class="default-btn" onclick="alert('All the items will be Delivered!')">
+                        Buy Now
+                    </button>
                 </div>
             </ul>
             <div class="nav-slide">
@@ -57,50 +59,64 @@
         </div>
     </section>
 
-    <!-- Model -->
-    <section class="hero center-flex section-p1">
-        <h4>Trade-in-offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>Save more with coupons up to 50% off</p>
-        <button>Shop Now</button>
+    <!-- Product Detail Section -->
+    <section class="prodetails section-p1">
+        <div class="single-prod-img">
+            <img class="mainImg" src="./Images/products/f1.jpg" width="100%" alt="">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img class="smallImg" src="./Images/products/f1.jpg" width="100%" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img class="smallImg" src="./Images/products/f2.jpg" width="100%" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img class="smallImg" src="./Images/products/f3.jpg" width="100%" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img class="smallImg" src="./Images/products/f4.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="single-prod-details">
+            <h5>Home / T shirts</h5>
+            <h2>Men's Fashion T Shirts</h2>
+            <hr>
+            <div class="price-box">
+                <h4>Price</h4>
+                <h3>$123.45</h3>
+            </div>
+            <div class="quantity-box">
+                <h4>Quantity</h4>
+                <div class="quantity">
+                    <i class="fas fa-plus"></i>
+                    <span id="quantity-value">1</span>
+                    <i class="fas fa-minus"></i>
+                </div>
+            </div>
+            <div class="size-box">
+                <h4>Size</h4>
+                <div class="size">
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </div>
+            </div>
+            <hr>
+            <button class="default-btn">Add to Cart</button>
+            <h2>Product Details</h2>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos omnis alias ullam architecto facere aspernatur hic laudantium enim voluptates deserunt excepturi molestias eos possimus quis, iure amet tenetur atque asperiores! Doloribus voluptatem vitae totam praesentium, ipsam debitis possimus autem ea! Commodi consequatur recusandae aspernatur est laudantium quisquam nostrum aperiam, nam soluta iusto iste dolore quo hic, eaque reprehenderit quos inventore qui. Blanditiis iusto illo quibusdam totam sequi facilis debitis, excepturi odit esse. Minus, placeat perferendis nihil culpa quibusdam harum error commodi in ex eos suscipit facere aut omnis voluptatum, nam delectus eius sit doloribus. Doloremque vero blanditiis animi vitae aliquid.</span>
+        </div>
     </section>
 
-    <!-- Features -->
-    <section class="feature center-flex section-p1">
-        <div class="fe-box">
-            <img src="../../Images/features/f1.png" alt="" />
-            <h6>Free Shipping</h6>
-        </div>
-        <div class="fe-box">
-            <img src="../../Images/features/f2.png" alt="" />
-            <h6>Order Online</h6>
-        </div>
-        <div class="fe-box">
-            <img src="../../Images/features/f3.png" alt="" />
-            <h6>Save Money</h6>
-        </div>
-        <div class="fe-box">
-            <img src="../../Images/features/f4.png" alt="" />
-            <h6>Promotions</h6>
-        </div>
-        <div class="fe-box">
-            <img src="../../Images/features/f5.png" alt="" />
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="fe-box">
-            <img src="../../Images/features/f6.png" alt="" />
-            <h6>24/7 Support</h6>
-        </div>
-    </section>
-
-    <!-- Features Product -->
+    <!-- Products Section -->
     <section class="product1 section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Modern Designs</p>
+        <h2>Products</h2>
+        <p>All the latest products are avialble</p>
         <div class="prod-container center-flex">
             <div class="prod">
-                <img src="../../Images/products/f1.jpg" alt="" />
+                <img src="./Images/products/f1.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Tropical Shirt</h5>
@@ -118,7 +134,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f2.jpg" alt="" />
+                <img src="./Images/products/f2.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Beige Flowered Shirt</h5>
@@ -136,7 +152,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f3.jpg" alt="" />
+                <img src="./Images/products/f3.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Cream Flowered Shirt</h5>
@@ -154,7 +170,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f4.jpg" alt="" />
+                <img src="./Images/products/f4.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">White Flowers Shirt</h5>
@@ -172,7 +188,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f5.jpg" alt="" />
+                <img src="./Images/products/f5.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Purple Flowered Shirt</h5>
@@ -190,7 +206,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f6.jpg" alt="" />
+                <img src="./Images/products/f6.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Two-in-One Colored Shirt</h5>
@@ -208,7 +224,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f7.jpg" alt="" />
+                <img src="./Images/products/f7.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Grey Flowered Pant</h5>
@@ -226,7 +242,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/f8.jpg" alt="" />
+                <img src="./Images/products/f8.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Dull Purple Frock</h5>
@@ -243,23 +259,8 @@
                     <i class="fal fa-shopping-cart"></i>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Banner -->
-    <section class="banner center-flex section-m1">
-        <h3>Flash Deals</h3>
-        <h2>Up to <span>50% Off</span> - All t-Shirts & Accessories</h2>
-        <button class="default-btn">Explore More</button>
-    </section>
-
-    <!-- New Arrival -->
-    <section class="product1 section-p1">
-        <h2>New Arrivals</h2>
-        <p>Summer Collection New Modern Designs</p>
-        <div class="prod-container center-flex">
             <div class="prod">
-                <img src="../../Images/products/n1.jpg" alt="" />
+                <img src="./Images/products/n1.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Blue Shirt</h5>
@@ -277,7 +278,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n2.jpg" alt="" />
+                <img src="./Images/products/n2.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Grey Shirt</h5>
@@ -295,7 +296,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n3.jpg" alt="" />
+                <img src="./Images/products/n3.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">White Shirt</h5>
@@ -313,7 +314,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n4.jpg" alt="" />
+                <img src="./Images/products/n4.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Designed Shirt</h5>
@@ -331,7 +332,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n5.jpg" alt="" />
+                <img src="./Images/products/n5.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Blue Jeans Shirt</h5>
@@ -349,7 +350,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n6.jpg" alt="" />
+                <img src="./Images/products/n6.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Grey Shorts</h5>
@@ -367,7 +368,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n7.jpg" alt="" />
+                <img src="./Images/products/n7.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Camel Colored Shirt</h5>
@@ -385,7 +386,7 @@
                 </div>
             </div>
             <div class="prod">
-                <img src="../../Images/products/n8.jpg" alt="" />
+                <img src="./Images/products/n8.jpg" alt="" />
                 <div class="description">
                     <span>adidas</span>
                     <h5 class="prod-name">Black Shirt</h5>
@@ -402,38 +403,6 @@
                     <i class="fal fa-shopping-cart"></i>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Small Banners -->
-    <section class="sm-banner center-flex section-p1">
-        <div class="banner-box center-flex">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="default-btn">Learn More</button>
-        </div>
-        <div class="banner-box center-flex banner-box2">
-            <h4>spring/summer</h4>
-            <h2>upcomming seasons</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="default-btn">Collection</button>
-        </div>
-    </section>
-
-    <!-- Small Small Banners -->
-    <section class="banner3 center-flex section-p1">
-        <div class="banner-box center-flex">
-            <h4>SEASONAL SALE</h4>
-            <h5>50% Off</h5>
-        </div>
-        <div class="banner-box banner-box2 center-flex">
-            <h4>NEW FOOTWEAR</h4>
-            <h5>Spring / Summer 2023</h5>
-        </div>
-        <div class="banner-box banner-box3 center-flex">
-            <h4>T-SHIRTS</h4>
-            <h5>New Trendy Prints</h5>
         </div>
     </section>
 
@@ -493,7 +462,7 @@
         <p>@ 2023, EShop - HTML CSS Ecommerce</p>
     </section>
 
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
