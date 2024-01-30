@@ -1,6 +1,8 @@
 # Introduction
 This Ecommerce website is designed to facilitate product viewing, multipage navigation, order placement, and cart functionality. It has been developed using HTML, CSS, and JavaScript, emphasizing responsiveness and simplicity.
 
+Link to visit the website: https://devattaulnoor.github.io/ECom_Website/
+
 # Getting Started
 To run the website locally on your machine, follow these steps.
 - Clone the repository or download the source code.
